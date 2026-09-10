@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPDB Online - SMPN 1 Telukjambe Barat Karawang</title>
+    <!-- Tailwind CSS & Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- TOP BAR INFO -->
+    <div class="bg-blue-950 text-slate-300 text-xs py-2 px-4 border-b border-blue-900">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fas fa-map-marker-alt text-yellow-400 mr-1"></i> Karangligar, Telukjambe Barat, Karawang</span>
+                <span class="hidden md:inline"><i class="fas fa-clock text-yellow-400 mr-1"></i> Senin - Jumat (08.00 - 14.00 WIB)</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="tel:0267000000" class="hover:text-white transition"><i class="fas fa-phone mr-1"></i> Sekretariat PPDB</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-800 text-white w-10 h-10 rounded-xl flex items-center justify-center font-bold text-xl shadow-md">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-base md:text-lg text-blue-950 leading-tight">SMPN 1 TELUKJAMBE BARAT</h1>
+                    <p class="text-xs text-slate-500 font-medium">Kabupaten Karawang, Jawa Barat</p>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="#beranda" class="hover:text-blue-800 transition">Beranda</a>
+                <a href="#jalur" class="hover:text-blue-800 transition">Jalur & Kuota</a>
+                <a href="#syarat" class="hover:text-blue-800 transition">Persyaratan</a>
+                <a href="#jadwal" class="hover:text-blue-800 transition">Jadwal</a>
+                <a href="#formulir" class="hover:text-blue-800 transition">Formulir</a>
+                <a href="#faq" class="hover:text-blue-800 transition">FAQ</a>
+            </nav>
+
+            <a href="#formulir" class="hidden md:inline-flex bg-blue-800 hover:bg-blue-900 text-white text-xs font-bold px-4 py-2.5 rounded-lg shadow-md hover:shadow-lg transition">
+                Daftar Sekarang
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" class="md:hidden text-slate-700 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 text-sm font-medium">
+            <a href="#beranda" class="block py-2 text-slate-700 hover:text-blue-800">Beranda</a>
+            <a href="#jalur" class="block py-2 text-slate-700 hover:text-blue-800">Jalur & Kuota</a>
+            <a href="#syarat" class="block py-2 text-slate-700 hover:text-blue-800">Persyaratan</a>
+            <a href="#jadwal" class="block py-2 text-slate-700 hover:text-blue-800">Jadwal</a>
+            <a href="#formulir" class="block py-2 text-slate-700 hover:text-blue-800">Formulir</a>
+            <a href="#faq" class="block py-2 text-slate-700 hover:text-blue-800">FAQ</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="relative bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-950 text-white py-20 md:py-28 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-yellow-400/20 text-yellow-300 border border-yellow-400/30 text-xs font-bold px-3 py-1.5 rounded-full inline-block mb-4">
+                    <i class="fas fa-bullhorn mr-1"></i> Penerimaan Peserta Didik Baru (PPDB)
+                </span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+                    Wujudkan Masa Depan Cerdas & Berkarakter
+                </h2>
+                <p class="text-blue-100 text-sm sm:text-base leading-relaxed mb-8">
+                    Selamat datang di Portal PPDB Online SMP Negeri 1 Telukjambe Barat. Mari bergabung bersama sekolah unggulan yang berdedikasi membangun generasi berilmu dan berakhlak mulia di Karawang.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#formulir" class="bg-yellow-400 hover:bg-yellow-500 text-blue-950 font-extrabold px-6 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition text-center text-sm">
+                        <i class="fas fa-file-signature mr-2"></i> Isi Formulir PPDB
+                    </a>
+                    <a href="#syarat" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3.5 rounded-xl border border-white/20 transition text-center text-sm">
+                        <i class="fas fa-list-check mr-2"></i> Lihat Persyaratan
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card Info Ringkas -->
+            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-2xl text-left space-y-4">
+                <h3 class="text-lg font-bold text-yellow-300 border-b border-white/10 pb-3 flex items-center gap-2">
+                    <i class="fas fa-info-circle"></i> Informasi Utama PPDB
+                </h3>
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                        <div>
+                            <p class="font-semibold">Sistem Pendaftaran Gratis</p>
+                            <p class="text-xs text-blue-200">Seluruh proses pendaftaran tidak dipungut biaya apapun.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                        <div>
+                            <p class="font-semibold">Terbuka 4 Jalur Seleksi</p>
+                            <p class="text-xs text-blue-200">Zonasi, Afirmasi (KETM), Prestasi, dan Perpindahan Tugas Ortu.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                        <div>
+                            <p class="font-semibold">Layanan Bantuan</p>
+                            <p class="text-xs text-blue-200">Panitia siap membantu secara offline di sekretariat sekolah.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JALUR & KUOTA -->
+    <section id="jalur" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h3 class="text-2xl md:text-3xl font-extrabold text-blue-950">Jalur Pendaftaran & Kuota</h3>
+                <p class="text-slate-500 text-sm mt-2">Pilih jalur pendaftaran yang sesuai dengan kualifikasi dan domisili Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Jalur Zonasi -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-800 rounded-xl flex items-center justify-center font-bold text-xl mb-4">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 mb-1">Zonasi</h4>
+                    <span class="text-xs font-semibold bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full">Kuota: 50%</span>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                        Diperuntukkan bagi calon peserta didik yang berdomisili di dalam wilayah zonasi yang ditetapkan pemerintah daerah.
+                    </p>
+                </div>
+
+                <!-- Jalur Afirmasi -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center font-bold text-xl mb-4">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 mb-1">Afirmasi (KETM)</h4>
+                    <span class="text-xs font-semibold bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full">Kuota: 15%</span>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                        Diperuntukkan bagi siswa dari keluarga ekonomi tidak mampu (pemilik KIP/PKH/KKS) serta penyandang disabilitas.
+                    </p>
+                </div>
+
+                <!-- Jalur Prestasi -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-800 rounded-xl flex items-center justify-center font-bold text-xl mb-4">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 mb-1">Prestasi</h4>
+                    <span class="text-xs font-semibold bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">Kuota: 30%</span>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                        Berdasarkan nilai rapor sekolah asal atau prestasi perlombaan akademik maupun non-akademik (Olahraga/Seni/Kharisma).
+                    </p>
+                </div>
+
+                <!-- Jalur PTO -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-800 rounded-xl flex items-center justify-center font-bold text-xl mb-4">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-800 mb-1">Perpindahan Tugas</h4>
+                    <span class="text-xs font-semibold bg-purple-100 text-purple-800 px-2.5 py-1 rounded-full">Kuota: 5%</span>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                        Bagi calon peserta didik yang mengikuti perpindahan domisili tugas orang tua/wali (dibuktikan surat penugasan).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERSYARATAN BERKAS -->
+    <section id="syarat" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-blue-950 mb-4">Persyaratan Dokumen</h3>
+                    <p class="text-slate-600 text-sm mb-6">
+                        Pastikan seluruh berkas telah disiapkan dalam bentuk fisik (FC) untuk verifikasi ulang serta bentuk digital jika diperlukan.
+                    </p>
+                    
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex items-start gap-3 bg-white p-3 rounded-xl shadow-sm border border-slate-200">
+                            <i class="fas fa-id-card text-blue-800 text-lg mt-0.5"></i>
+                            <div>
+                                <strong class="block">Fotokopi Ijazah / Surat Keterangan Lulus (SKL)</strong>
+                                <span class="text-xs text-slate-500">Asli & Legalisir dari SD/MI asal.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-3 rounded-xl shadow-sm border border-slate-200">
+                            <i class="fas fa-users text-blue-800 text-lg mt-0.5"></i>
+                            <div>
+                                <strong class="block">Kartu Keluarga (KK) & Akta Kelahiran</strong>
+                                <span class="text-xs text-slate-500">KK minimal telah diterbitkan 1 tahun sebelum pendaftaran.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-3 rounded-xl shadow-sm border border-slate-200">
+                            <i class="fas fa-calculator text-blue-800 text-lg mt-0.5"></i>
+                            <div>
+                                <strong class="block">Rapor Kelas 4 - 6 & Kartu NISN</strong>
+                                <span class="text-xs text-slate-500">Fotokopi nilai rapor semester 7 s.d. 11.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-3 rounded-xl shadow-sm border border-slate-200">
+                            <i class="fas fa-award text-blue-800 text-lg mt-0.5"></i>
+                            <div>
+                                <strong class="block">Dokumen Pendukung Jalur Khusus</strong>
+                                <span class="text-xs text-slate-500">Kartu KIP/PKH (Afirmasi), Sertifikat Kejuaraan (Prestasi), SK Tugas (PTO).</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Info Box -->
+                <div class="bg-blue-900 text-white rounded-3xl p-8 shadow-xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <i class="fas fa-exclamation-circle text-yellow-400 text-4xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Catatan Penting Calon Pendaftar</h4>
+                        <p class="text-blue-200 text-sm leading-relaxed mb-6">
+                            Pastikan data seperti **NISN, NIK, dan Nama Lengkap** sinkron antara Dokumen Kartu Keluarga dengan Data Pokok Pendidikan (Dapodik) di sekolah asal Anda.
+                        </p>
+                        <div class="bg-blue-950/60 p-4 rounded-xl text-xs space-y-2 border border-blue-800">
+                            <p>✔️ Pengisian formulir online wajib diisi dengan benar.</p>
+                            <p>✔️ Simpan nomor/bukti pendaftaran setelah berhasil melakukan submitting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JADWAL TIMELINE -->
+    <section id="jadwal" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h3 class="text-2xl md:text-3xl font-extrabold text-blue-950">Jadwal Pelaksanaan PPDB</h3>
+                <p class="text-slate-500 text-sm mt-2">Pantau tahapan penting dalam proses penerimaan siswa baru.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="bg-slate-50 p-6 rounded-2xl border-t-4 border-blue-800 shadow-sm text-center">
+                    <span class="text-xs font-bold text-blue-800 uppercase tracking-wider">Tahap 1</span>
+                    <h4 class="font-bold text-slate-800 mt-2 mb-1">Pendaftaran Online</h4>
+                    <p class="text-xs text-slate-500 font-medium mb-3">23 Juni - 28 Juni</p>
+                    <p class="text-xs text-slate-600">Pengisian form & unggah berkas secara mandiri/kolektif.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border-t-4 border-blue-800 shadow-sm text-center">
+                    <span class="text-xs font-bold text-blue-800 uppercase tracking-wider">Tahap 2</span>
+                    <h4 class="font-bold text-slate-800 mt-2 mb-1">Verifikasi Berkas</h4>
+                    <p class="text-xs text-slate-500 font-medium mb-3">29 Juni - 02 Juli</p>
+                    <p class="text-xs text-slate-600">Proses pencocokan data oleh panitia PPDB sekolah.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border-t-4 border-blue-800 shadow-sm text-center">
+                    <span class="text-xs font-bold text-blue-800 uppercase tracking-wider">Tahap 3</span>
+                    <h4 class="font-bold text-slate-800 mt-2 mb-1">Pengumuman</h4>
+                    <p class="text-xs text-slate-500 font-medium mb-3">05 Juli</p>
+                    <p class="text-xs text-slate-600">Pengumuman kelulusan di website & papan sekolah.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border-t-4 border-blue-800 shadow-sm text-center">
+                    <span class="text-xs font-bold text-blue-800 uppercase tracking-wider">Tahap 4</span>
+                    <h4 class="font-bold text-slate-800 mt-2 mb-1">Daftar Ulang</h4>
+                    <p class="text-xs text-slate-500 font-medium mb-3">07 Juli - 09 Juli</p>
+                    <p class="text-xs text-slate-600">Pernyataan bersedia & penyerahan kelengkapan dokumen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULIR PENDAFTARAN -->
+    <section id="formulir" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white text-slate-800 rounded-3xl p-6 md:p-10 shadow-2xl">
+                <div class="text-center mb-8 border-b pb-6">
+                    <h3 class="text-2xl font-extrabold text-blue-950">Formulir Pendaftaran PPDB</h3>
+                    <p class="text-slate-500 text-xs md:text-sm mt-1">Lengkapi isian formulir di bawah ini dengan cermat dan teliti.</p>
+                </div>
+
+                <form id="ppdbForm" class="space-y-6">
+                    <!-- SECTION A -->
+                    <div>
+                        <h4 class="font-bold text-blue-900 text-sm uppercase tracking-wider mb-4 bg-blue-50 p-2.5 rounded-lg flex items-center gap-2">
+                            <i class="fas fa-user-graduate"></i> A. Data Diri Calon Siswa
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold mb-1 text-slate-700">Nama Lengkap (Sesuai Ijazah)</label>
+                                <input type="text" id="nama" required class="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none" placeholder="Contoh: Ahmad Rizky">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold mb-1 text-slate-700">NISN (10 Digit)</label>
+                                <input type="number" id="nisn" required class="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none" placeholder="0012345678">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold mb-1 text-slate-700">NIK (Sesuai KK)</label>
+                                <input type="number" id="nik" required class="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none" placeholder="3215...">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold mb-1 text-slate-700">Jenis Kelamin</label>
+                                <select id="jk" required class="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                                    <option value="">-- Pilih Jenis Kelamin --</option>
+                                    <option value="Laki-Laki">Laki-Laki</option>
+                                    <option value="Perempuan">Perempuan</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold mb-1 text-slate-700">Tempat Lahir</label>
+                                <input type="text" id="tempatLahir" required class="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none" placeholder="Karawang">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold mb-1 text-slate-700">Tanggal Lahir</label>
+                                <input type="date" id="tglLahir" required class="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION B -->
+                    <div>
+                        <h4 class="font-bold text-blue-900 text-sm uppercase tracking-wider mb-4 bg-blue-50 p-2.5 rounded-lg flex items-center gap-2">
+                            <i class="fas fa-school"></i> B. Asal Sekolah & Jalur
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold mb-1 text-slate-700">Sekolah Asal (SD/MI)</label>
+                                <input type="text" id="sekolahAsal" required class="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none" placeholder="SDN Telukjambe 1">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold mb-1 text-slate-700">Pilihan Jalur Pendaftaran</label>
+                                <select id="jalur" required class="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                                    <option value="">-- Pilih Jalur --</option>
+                                    <option value="Zonasi">Zonasi</option>
+                                    <option value="Afirmasi">Afirmasi (KETM)</option>
+                                    <option value="Prestasi">Prestasi</option>
+                                    <option value="Perpindahan Tugas">Perpindahan Tugas Orang Tua</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION C -->
+                    <div>
+                        <h4 class="font-bold text-blue-900 text-sm uppercase tracking-wider mb-4 bg-blue-50 p-2.5 rounded-lg flex items-center gap-2">
+                            <i class="fas fa-address-book"></i> C. Kontak & Alamat
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold mb-1 text-slate-700">Nama Orang Tua / Wali</label>
+                                <input type="text" id="ortu" required class="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none" placeholder="Nama Orang Tua">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold mb-1 text-slate-700">No. WhatsApp / HP Aktif</label>
+                                <input type="tel" id="hp" required class="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none" placeholder="08123456789">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-bold mb-1 text-slate-700">Alamat Rumah Lengkap</label>
+                                <textarea id="alamat" rows="3" required class="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none" placeholder="Kampung, RT/RW, Desa, Kecamatan, Kabupaten"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-3.5 rounded-xl shadow-lg hover:shadow-xl transition text-sm">
+                        <i class="fas fa-paper-plane mr-2"></i> Kirim Pendaftaran Online
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (PERTANYAAN UMUM) -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-extrabold text-blue-950">Pertanyaan Sering Diajukan (FAQ)</h3>
+                <p class="text-slate-500 text-sm mt-2">Temukan jawaban atas pertanyaan umum seputar PPDB.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="border border-slate-200 rounded-xl p-4 cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-slate-800 text-sm">
+                        <span>Apakah pendaftaran PPDB dipungut biaya?</span>
+                        <i class="fas fa-chevron-down text-slate-400"></i>
+                    </div>
+                    <p class="text-xs text-slate-600 mt-3 hidden">
+                        Tidak. Seluruh tahapan pendaftaran PPDB di SMPN 1 Telukjambe Barat bersifat 100% GRATIS dan bebas pungutan biaya.
+                    </p>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl p-4 cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-slate-800 text-sm">
+                        <span>Bagaimana jika saya kesulitan mengisi formulir secara online?</span>
+                        <i class="fas fa-chevron-down text-slate-400"></i>
+                    </div>
+                    <p class="text-xs text-slate-600 mt-3 hidden">
+                        Calon peserta didik atau orang tua dapat datang langsung ke Sekretariat PPDB SMPN 1 Telukjambe Barat pada jam kerja untuk dibantu pendaftarannya oleh panitia.
+                    </p>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl p-4 cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-slate-800 text-sm">
+                        <span>Apakah bisa mendaftar di 2 jalur berbeda secara bersamaan?</span>
+                        <i class="fas fa-chevron-down text-slate-400"></i>
+                    </div>
+                    <p class="text-xs text-slate-600 mt-3 hidden">
+                        Setiap pendaftar hanya diperbolehkan memilih 1 jalur pendaftaran utama pada saat periode pendaftaran berlangsung.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-950 text-slate-400 text-xs py-12 border-t border-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-white font-bold text-base mb-3">SMPN 1 Telukjambe Barat</h4>
+                <p class="leading-relaxed">
+                    Sekolah Menengah Pertama Negeri yang berdedikasi menciptakan lulusan berprestasi, berkarakter, dan berdaya saing di Karawang.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-base mb-3">Kontak & Lokasi</h4>
+                <p><i class="fas fa-map-marker-alt mr-2 text-yellow-400"></i> Desa Karangligar, Kec. Telukjambe Barat, Kab. Karawang, Jawa Barat</p>
+                <p class="mt-2"><i class="fas fa-envelope mr-2 text-yellow-400"></i> ppdb@smpn1telukjambebarat.sch.id</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-base mb-3">Hak Cipta</h4>
+                <p>&copy; 2026 Panitia PPDB SMPN 1 Telukjambe Barat.</p>
+                <p class="mt-2 text-slate-500">Sistem Informasi Penerimaan Peserta Didik Baru Online.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT INTEGRASI & INTERAKSI -->
+    <script>
+        // TOGGLE FAQ ACCORDION
+        function toggleFaq(element) {
+            const p = element.querySelector('p');
+            const icon = element.querySelector('i');
+            p.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // TOGGLE MOBILE MENU
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // MASUKKAN URL GOOGLE APPS SCRIPT DI SINI (JIKA SUDAH DIPASANG)
+        const SCRIPT_URL = 'GANTI_DENGAN_URL_WEB_APP_ANDA';
+
+        document.getElementById('ppdbForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Memproses Pendaftaran...';
+
+            const formData = {
+                nama: document.getElementById('nama').value,
+                nisn: document.getElementById('nisn').value,
+                nik: document.getElementById('nik').value,
+                jk: document.getElementById('jk').value,
+                tempatLahir: document.getElementById('tempatLahir').value,
+                tglLahir: document.getElementById('tglLahir').value,
+                sekolahAsal: document.getElementById('sekolahAsal').value,
+                jalur: document.getElementById('jalur').value,
+                ortu: document.getElementById('ortu').value,
+                hp: document.getElementById('hp').value,
+                alamat: document.getElementById('alamat').value
+            };
+
+            // Jika URL Apps Script belum diisi, jalankan simulasi
+            if (SCRIPT_URL === 'GANTI_DENGAN_URL_WEB_APP_ANDA') {
+                setTimeout(() => {
+                    alert(`PENDAFTARAN BERHASIL (Simulasi)!\n\nData atas nama ${formData.nama} dari ${formData.sekolahAsal} telah tersimpan.\n\n(Catatan: Untuk menyimpan otomatis ke Google Sheets, masukkan URL Web App Google Script Anda pada file index.html)`);
+                    this.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }, 1000);
+                return;
+            }
+
+            // Integrasi Real ke Google Sheets
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                body: JSON.stringify(formData)
+            })
+            .then(res => res.json())
+            .then(res => {
+                if(res.result === 'success') {
+                    alert(`PENDAFTARAN BERHASIL!\n\nData atas nama ${formData.nama} berhasil tersimpan ke sistem database panitia PPDB.`);
+                    this.reset();
+                } else {
+                    alert('Gagal menyimpan data: ' + res.error);
+                }
+            })
+            .catch(err => {
+                alert('Terjadi kesalahan jaringan/sistem.');
+                console.error(err);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            });
+        });
+    </script>
+</body>
+</html>
